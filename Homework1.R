@@ -19,9 +19,11 @@ summary(wind)
 hist(wind,xlab = "Wind Speeds", main = "Histogram of Wind Speeds", col="cadetblue", density = 6)
 library(scatterplot3d)
 #Plot density function 1E
-dense <- density(as.numeric(dataset$month))
-plot(dense, main = "Plot for months")
-polygon(dense, col = "red",border="blue")
+#dense <- density(as.numeric(dataset$month))
+#plot(dense, main = "Plot for months")
+#polygon(dense, col = "red",border="blue")
+library(ggplot2)
+qplot(wind,data=dataset,geom = "density", color=month, main = "Density Plot of Wind Speeds By Month")
 #Plot Scatter Matrix for temp, RH, DC and DMC 1F
 pairs(~temp+RH+DC+DMC, data = dataset, main="Scatter Matrix")
 #More correlated scatter matrix with colors

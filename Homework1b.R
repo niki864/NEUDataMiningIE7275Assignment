@@ -5,6 +5,7 @@ head(dataset)
 #Qns 2A and 2C data quality and distribution
 library(fitdistrplus)
 descdist(dataset$friends_count, discrete = TRUE)
+hist(dataset$friends_count, main = "Distribution of Friends Count")
 #High skewness and kurtosis indicate the data has a lot of outliers and doesn't follow a normal distrbution and is not symmetric
 #Cullen-Frey graph analysis of the data indicates that the data might follow a negative-binormial distribution
 #Question 2B find summary statistics
