@@ -16,7 +16,9 @@ hist(wind,xlab = "Wind Speeds", main = "Histogram of Wind Speeds", col="cadetblu
 #Summary statistics 1C
 summary(wind)
 #Add density lines 1D
-hist(wind,xlab = "Wind Speeds", main = "Histogram of Wind Speeds", col="cadetblue", density = 6)
+#hist(wind,xlab = "Wind Speeds", main = "Histogram of Wind Speeds", col="cadetblue", density = 6)
+hist(wind,xlab = "Wind Speeds", main = "Histogram of Wind Speeds", col="cadetblue")
+lines(density(wind), col="blue",lwd=2)
 library(scatterplot3d)
 #Plot density function 1E
 #dense <- density(as.numeric(dataset$month))
